@@ -7,6 +7,7 @@ Group:      Development/System
 License:    MIT
 URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/releases/individual/proto/dmxproto-%{version}.tar.gz
+Source1001: packaging/xorg-x11-proto-dmxproto.manifest 
 Provides:   dmxproto
 BuildRequires: pkgconfig(xorg-macros)
 
@@ -20,6 +21,7 @@ Description: %{summary}
 
 
 %build
+cp %{SOURCE1001} .
 
 %reconfigure --disable-static \
     --libdir=%{_datadir}
@@ -34,6 +36,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest xorg-x11-proto-dmxproto.manifest
 %defattr(-,root,root,-)
 %{_includedir}/X11/extensions/dmx.h
 %{_includedir}/X11/extensions/dmxproto.h
