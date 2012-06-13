@@ -3,7 +3,7 @@ Name:       xorg-x11-proto-dmxproto
 Summary:    X.Org X11 Protocol dmxproto
 Version:    2.3
 Release:    1.5
-Group:      Development/System
+Group:      Graphics/X Window System
 License:    MIT
 URL:        http://www.x.org
 Source0:    %{name}-%{version}.tar.gz
